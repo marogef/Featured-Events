@@ -1,13 +1,3 @@
-<!--
-Write an HTML page with one form with the following:
-(1) Four text boxes to input these values:
-(i) Name of the user (ii) User Id (iii) password (iv) Password again for
-confirmation
-(2) One checkbox group with a set of four check boxes (you make the items).
-(3) One select tag with a set of four items (you make the items).
-(4) One submit button-->
-
-
 <!DOCTYPE html>
 <html>
 <body>
@@ -15,14 +5,17 @@ confirmation
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Container Form</title>
-    <link rel="stylesheet" href="main.css">
+<!--    <link rel="stylesheet" href="main.css">-->
+     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
 </head>
 <header>
 
 </header>
 <h1>Complete the following requirements:</h1>
 
-<form action="/my-handling-form-page" method="post">
+<form action="javascript:()">
+<!--<form action="/my-handling-form-page" id="one" method="post">-->
  <ul>
   <li>
     <label for="name">Name:</label>
@@ -40,8 +33,7 @@ confirmation
     <label for="msg">Password :</label>
     <textarea id="remsg" name="reuser_message"></textarea>
   </li>
- </ul>
-    
+         
 <input type="checkbox" id="food1" name="food1" value="beans">
 <label for="food1"> I eat beans</label><br>
 <input type="checkbox" id="food2" name="food2" value="steak">
@@ -50,7 +42,6 @@ confirmation
 <label for="food3"> I eat eggs</label><br>
 <input type="checkbox" id="food4" name="food4" value="vegetables">
 <label for="food4"> I eat vegetables</label><br>
-    
 
 <label for="vegetables">Choose a vegetable type:</label>
 
@@ -62,8 +53,13 @@ confirmation
 </select>
     
     <p>Click the "Submit" button to display the results.</p>
-    <input type = "submit" value = "Submit" />
+ </ul>
+<input type="submit" value="Send">
 </form>
+<div></div>
+<script>
+
+</script>
     <footer class="footer ">
         <p>&copy; 2020 Faras Maroge</p>
     </footer>
