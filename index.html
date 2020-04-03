@@ -1,5 +1,5 @@
 <!--
-Basic first requirments
+Write an HTML page with one form with the following:
 (1) Four text boxes to input these values:
 (i) Name of the user (ii) User Id (iii) password (iv) Password again for
 confirmation
@@ -11,18 +11,41 @@ confirmation
 <!DOCTYPE html>
 <html>
 <body>
-    
-    <head>  
+ <head>  
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container Form</title>
+        <title>Container Form</title>
     <link rel="stylesheet" href="main.css">
 </head>
-    <header>
-    </header>
-    <section class="container">
-        <h2>Add requirements here:</h2>
-          <footer class="footer ">
+<header>
+
+</header>
+<h1>Complete the following requirements:</h1>
+
+<form action="/my-handling-form-page" method="post">
+ <ul>
+  <li>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
+  </li>
+  <li>
+    <label for="mail">User Id:</label>
+    <input type="email" id="mail" name="user_email">
+  </li>
+  <li>
+    <label for="msg">Password:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </li>
+  <li>
+    <label for="msg">Password :</label>
+    <textarea id="remsg" name="reuser_message"></textarea>
+  </li>
+ </ul>
+    
+    <p>Click the "Submit" button to display the results.</p>
+    <input type = "submit" value = "Submit" />
+</form>
+    <footer class="footer ">
         <p>&copy; 2020 Faras Maroge</p>
     </footer>
 </body>
