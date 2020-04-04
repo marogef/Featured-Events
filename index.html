@@ -68,16 +68,19 @@
        var name = $("#name").val();
        var mail = $("#mail").val();
        var pass = $("#msg").val();
-        alert("the name is " + name + "the mail is " +mail + "the password is " +pass);
-
+        alert("the name is " + name + "the mail is " +mail + "the password is " +pass );
     });
 </script>
+    
+    <style>
 
+span{ width: 200px; height: 50px; background-color:yellow;}
+</style>
+    
     <script>
 $("form").submit(function(){
 var selectedItems = $('option:selected');
 $('div').append("And...");
-49
 $('div').append("<p>");
 for(i=0;i<selectedItems.length;i++){
  $('div').append($(selectedItems[i]).val());
