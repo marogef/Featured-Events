@@ -5,7 +5,7 @@
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Container Form</title>
-<!--    <link rel="stylesheet" href="main.css">-->
+    <link rel="stylesheet" href="main.css">
      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
 </head>
@@ -33,7 +33,7 @@
     <label for="msg">Password :</label>
     <textarea id="remsg" name="reuser_message"></textarea>
   </li>
-         
+      </ul>    
 <input type="checkbox" id="food1" name="food1" value="beans">
 <label for="food1"> I eat beans</label><br>
 <input type="checkbox" id="food2" name="food2" value="steak">
@@ -42,7 +42,6 @@
 <label for="food3"> I eat eggs</label><br>
 <input type="checkbox" id="food4" name="food4" value="vegetables">
 <label for="food4"> I eat vegetables</label><br>
-
 <label for="vegetables">Choose a vegetable type:</label>
 
 <select id="vegetables">
@@ -52,13 +51,39 @@
   <option value="beets">beeets</option>
 </select>
     
-    <p>Click the "Submit" button to display the results.</p>
- </ul>
+<p>Click the "Submit" button to display the results.</p>
 <input type="submit" value="Send">
 </form>
 <div></div>
 <script>
+    $("form").submit(function(){
+    var checkedInputs = $('input:checked');
+    $('div').append("You have chosen...");
+    $('div').append("<p>");
+    43
+    for(i=0;i<checkedInputs.length;i++){
+     $('div').append($(checkedInputs[i]).val());
+     $('div').append("<p>");
+    }
+       var name = $("#name").val();
+       var mail = $("#mail").val();
+       var pass = $("#msg").val();
+        alert("the name is " + name + "the mail is " +mail + "the password is " +pass);
 
+    });
+</script>
+
+    <script>
+$("form").submit(function(){
+var selectedItems = $('option:selected');
+$('div').append("And...");
+49
+$('div').append("<p>");
+for(i=0;i<selectedItems.length;i++){
+ $('div').append($(selectedItems[i]).val());
+ $('div').append("<br>");
+}
+});
 </script>
     <footer class="footer ">
         <p>&copy; 2020 Faras Maroge</p>
