@@ -9,9 +9,7 @@
      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
 </head>
-<header>
 
-</header>
 <h1>Complete the following requirements:</h1>
 
 <form action="javascript:()">
@@ -19,7 +17,7 @@
  <ul>
   <li>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name.toUpperCase();">
   </li>
   <li>
     <label for="mail">User Id:</label>
@@ -60,31 +58,56 @@
     var checkedInputs = $('input:checked');
     $('div').append("You have chosen...");
     $('div').append("<p>");
-    43
     for(i=0;i<checkedInputs.length;i++){
-     $('div').append($(checkedInputs[i]).val());
-     $('div').append("<p>");
+         $('div').append($(checkedInputs[i]).val());
+         $('div').append("<p>");
     }
        var name = $("#name").val();
        var mail = $("#mail").val();
+        
+         if(mail.length >= 3 && mail.length <= 9)
+      {  	
+        return true;  	
+      }
+   else if (mail.length <= 3 && mail.length >= 9) 
+   {
+       alert("Please input between " +minlength+ " and " +maxlength+ " characters");  		
+        return false;  	
+      }
        var pass = $("#msg").val();
-        alert("the name is " + name + "the mail is " +mail + "the password is " +pass );
+       var passConf= $("#remsg").val();
+        
+   if (pass == passConf) {
+              return true;
+    }
+    else if (pass != passConf)
+    {
+        alert('Error, you typed a differnt value for the password');
+
+    }
+
+        
+        if(name == "" ){alert("The textbox is empty. Please type appropriate value in the box");
+}
+         else if(mail == "" ){alert("The textbox is empty. Please type appropriate value in the box");
+}
+         else if(pass == "" ){alert("The textbox is empty. Please type appropriate value in the box");
+}
+         else{ alert("the name is " + name + "the mail is " +mail + "the password is " +pass );
+    }
+        
+       
     });
 </script>
     
-    <style>
-
-span{ width: 200px; height: 50px; background-color:yellow;}
-</style>
-    
     <script>
 $("form").submit(function(){
-var selectedItems = $('option:selected');
-$('div').append("And...");
-$('div').append("<p>");
-for(i=0;i<selectedItems.length;i++){
- $('div').append($(selectedItems[i]).val());
- $('div').append("<br>");
+    var selectedItems = $('option:selected');
+    $('div').append("And...");
+    $('div').append("<p>");
+    for(i=0;i<selectedItems.length;i++){
+     $('div').append($(selectedItems[i]).val());
+     $('div').append("<br>");
 }
 });
 </script>
